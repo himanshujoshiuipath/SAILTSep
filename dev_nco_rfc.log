@@ -1,0 +1,778 @@
+
+**** Log file opened by process 26428 at 2023-08-01 12:05:29 (UTC+05:30 India Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.24.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files\UiPath\Studio\net461\UiPath.Studio.Project.exe
+Working directory: C:\Users\himanshu.joshi\OneDrive - UiPath\Documents\UiPath\SAPCreateSalesOrderBAPI
+Operating system: Windows 10 Enterprise 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 722, Kernel release: 722, Kernel patch level: 1024
+Hostname: DESKTOP-QRSKISI, IP address: 169.254.7.8, IP_v6 address: fe80::5b99:f910:bf68:fe8c
+
+Default trace level: None
+
+>> Error entry 2023-08-01 12:05:29.892 [Thread 24]
+SAP.Middleware.Connector.RfcConfigurationException: Missing required parameter: When using a concrete application server, SYSNR needs to be in the set of configuration parameters.
+   at SAP.Middleware.Connector.RfcDestination.CheckConfiguration()
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:05:52.906 [Thread 23]
+SAP.Middleware.Connector.RfcConfigurationException: A4 is not a valid system number
+   at SAP.Middleware.Connector.RfcConfigParameters.NormalizedCopyTo(RfcConfigParameters target)
+   at SAP.Middleware.Connector.RfcConfigParameters.NormalizedCopy()
+   at SAP.Middleware.Connector.RfcDestination..ctor(String destName, RfcConfigParameters parameters)
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:06:01.816 [Thread 24]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 00024error during logon
+RETURN CODE: 18
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:06:01.816 [Thread 24]
+[ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 00024error during logon
+RETURN CODE: 18
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:06:01.817 [Thread 24]
+SAP.Middleware.Connector.RfcCommunicationException: 00024error during logon
+RETURN CODE: 18
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:06:20.450 [Thread 10]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.13 SYSNR=00 SYSID=s4h NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 00024error during logon
+RETURN CODE: 18
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:06:20.451 [Thread 10]
+[ASHOST=20.16.188.13 SYSNR=00 SYSID=s4h NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 00024error during logon
+RETURN CODE: 18
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:06:20.451 [Thread 10]
+SAP.Middleware.Connector.RfcCommunicationException: 00024error during logon
+RETURN CODE: 18
+   at SAP.Middleware.Connector.CpicConnection.ThrowCpicErrorMsg(Int32 length, Int32 dataReceived)
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:07:08.699 [Thread 8]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:07:08.700 [Thread 8]
+[ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:07:08.700 [Thread 8]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:07:29.250 [Thread 24]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.13 SYSNR=00 SYSID=S4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:07:29.251 [Thread 24]
+[ASHOST=20.16.188.13 SYSNR=00 SYSID=S4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:07:29.251 [Thread 24]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:08:05.650 [Thread 49]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=803 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 803 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 803 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:08:05.651 [Thread 49]
+[ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=803 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 803 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 803 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:08:05.651 [Thread 49]
+SAP.Middleware.Connector.RfcLogonException: Client 803 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 803 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:08:11.363 [Thread 24]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:08:11.363 [Thread 24]
+[ASHOST=20.16.188.13 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:08:11.363 [Thread 24]
+SAP.Middleware.Connector.RfcLogonException: Client 804 is not available in this system ---> SAP.Middleware.Connector.RfcAbapMessageException: Client 804 is not available in this system
+   at SAP.Middleware.Connector.RfcConnection.ThrowRfcErrorMsg()
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   --- End of inner exception stack trace ---
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:09:32.654 [Thread 53]
+Failure to create pool for destination SapDefaultConnectionName (ORIGINAL, user: null) [ASHOST=20.16.188.67 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '20.16.188.67:3300' not reached
+TIME        Tue Aug 01 12:09:32 2023
+RELEASE     722
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3287
+DETAIL      NiPConnect2: 20.16.188.67:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+RETURN CODE: 20
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:09:32.655 [Thread 53]
+[ASHOST=20.16.188.67 SYSNR=00 SYSID=A4H USER=S4H_FIN CLIENT=804 LANG=EN NAME=SapDefaultConnectionName]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '20.16.188.67:3300' not reached
+TIME        Tue Aug 01 12:09:32 2023
+RELEASE     722
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3287
+DETAIL      NiPConnect2: 20.16.188.67:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+RETURN CODE: 20
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+>> Error entry 2023-08-01 12:09:32.656 [Thread 53]
+SAP.Middleware.Connector.RfcCommunicationException: 
+LOCATION    CPIC (TCP/IP) on local host with Unicode
+ERROR       partner '20.16.188.67:3300' not reached
+TIME        Tue Aug 01 12:09:32 2023
+RELEASE     722
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -10
+MODULE      nixxi.cpp
+LINE        3287
+DETAIL      NiPConnect2: 20.16.188.67:3300
+SYSTEM CALL connect
+ERRNO       10060
+ERRNO TEXT  WSAETIMEDOUT: Connection timed out
+COUNTER     2
+
+RETURN CODE: 20
+   at SAP.Middleware.Connector.CpicConnection.ConnectAsClient(Dictionary`2 options, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnection.ConnectAsClient(RfcDestination destination, Boolean forRepository)
+   at SAP.Middleware.Connector.RfcConnectionPool..ctor(RfcDestination destination, Boolean forRepositoryCalls)
+   at SAP.Middleware.Connector.RfcConnectionPool.GetPool(RfcDestination destination, Boolean forRepository, Boolean create)
+   at SAP.Middleware.Connector.RfcDestination.GetClient(Boolean forRepository)
+   at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
+   at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
+   at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+   at SAP.Middleware.Connector.RfcDestination.get_Repository()
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnector.SetRepository(String destinationNameString)
+   at UiPath.SAP.BAPI.ConnectionService.SapConnectionService.SapConnectionService.Connect(SapConnection sapConnection)
+   at UiPath.SAP.BAPI.Activities.Design.ViewModels.ConnectionWindowViewModel.<ConnectAsync>b__101_0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.Tasks.Task.Execute()
+   at System.Threading.Tasks.Task.ExecutionContextCallback(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+   at System.Threading.Tasks.Task.ExecuteEntry(Boolean bPreventDoubleExecution)
+   at System.Threading.Tasks.Task.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+
+**** Log file opened by process 8996 at 2023-09-13 11:25:21 (UTC+05:30 India Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.24.0 running on 32-bit .NET Framework 4.0.30319.42000
+Program: C:\Program Files\UiPath\Studio\net461\UiPath.Studio.Project.exe
+Working directory: C:\Users\himanshu.joshi\OneDrive - UiPath\Documents\RPA Training\Experiential Learning\SAP EL\Exercise 2\SAPCreateSalesOrderBAPI
+Operating system: Windows 10 Enterprise 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 722, Kernel release: 722, Kernel patch level: 1024
+Hostname: DESKTOP-QRSKISI, IP address: 169.254.239.141, IP_v6 address: fe80::e019:e942:427b:c76a
+
+Default trace level: None
+
+>> Error entry 2023-09-13 11:25:21.565 [Thread 47]
+SAP.Middleware.Connector.RfcCommunicationException: 
+ERROR       connection to partner '20.16.188.67:3350' broken
+TIME        Wed Sep 13 11:25:21 2023
+RELEASE     722
+COMPONENT   NI (network interface)
+VERSION     40
+RC          -6
+MODULE      nixxi.cpp
+LINE        5098
+DETAIL      NiIRead: P=20.16.188.67:3350; L=192.168.0.104:63025
+SYSTEM CALL recv
+ERRNO       10054
+ERRNO TEXT  WSAECONNRESET: Connection reset by peer
+COUNTER     3
+
+RETURN CODE: 20
+   at SAP.Middleware.Connector.CpicConnection.CpicReceive(Int32 timeout)
+   at SAP.Middleware.Connector.CpicConnection.Read(Byte* buffer, Int32 offset, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadBytes(Byte* buffer, Int32 count)
+   at SAP.Middleware.Connector.RfcConnection.ReadRfcIDBegin(Int32& length)
+   at SAP.Middleware.Connector.RfcConnection.ReadUpTo(RFCGET readState, RfcFunction function, RFCID toRid)
+   at SAP.Middleware.Connector.RfcConnection.RfcReceive(RfcFunction function)
+   at SAP.Middleware.Connector.RfcConnection.ResetSAPServerContext()
+   at SAP.Middleware.Connector.RfcStatefulClientSessionState.Dispose(Boolean disposing)
+   at SAP.Middleware.Connector.RfcClientSessionState.Dispose()
+   at SAP.Middleware.Connector.ClientSessions`2.RemoveSession(String sessionId)
+   at SAP.Middleware.Connector.RfcSessionManager.RemoveClientSession(String sessionId)
+   at SAP.Middleware.Connector.RfcSessionManager.UpdateSessions(Object state)
+   at System.Threading.TimerQueueTimer.CallCallbackInContext(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.TimerQueueTimer.CallCallback()
+   at System.Threading.TimerQueueTimer.Fire()
+   at System.Threading.TimerQueue.FireNextTimers()
+   at System.Threading.TimerQueue.AppDomainTimerCallback(Int32 id)
